@@ -5,7 +5,7 @@ export async function fetchCars() {
   };
 
   const response = await fetch(
-    'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=carrera',
+    'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=q5',
     {
       headers: headers,
     }
@@ -64,7 +64,7 @@ export const generateCarImageUrl = (car: CarProps, angle?: string) => {
 
   url.searchParams.append(
     'customer',
-    process.env.NEXT_PUBLIC_IMAGIN_API_KEY || ''
+    process.env.NEXT_PUBLIC_IMAGIN_API_KEY || 'hrjavascript-mastery'
   );
   url.searchParams.append('make', make);
   url.searchParams.append('modelFamily', model.split(' ')[0]);
